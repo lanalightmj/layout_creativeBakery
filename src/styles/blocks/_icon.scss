@@ -1,0 +1,12 @@
+.icon {
+  display: block;
+  height: 24px;
+  width: 24px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &--open-menu {
+    background-image: url(../images/icons/burger-menu.svg);
+  }
+}

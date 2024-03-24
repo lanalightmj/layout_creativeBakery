@@ -1,0 +1,89 @@
+.header {
+  @include content-padding-inline;
+
+  background-image: url(../images/header-bg.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  height: 100vh;
+
+  &__bottom {
+    height: calc(100vh - $top-bar-height-mobile);
+    display: grid;
+
+    padding-top: 32px;
+    padding-bottom: 40px;
+
+    @include on-tablet {
+      padding-top: 80px;
+      padding-bottom: 0;
+    }
+
+    @include on-desktop {
+      padding-top: 135px;
+    }
+
+    @include on-wide-desktop {
+      padding-top: 144px;
+    }
+  }
+
+  &__text {
+    grid-column: 1 / -1;
+    padding-bottom: 32px;
+
+    @include on-tablet {
+      grid-column: span 4;
+      padding-bottom: 146px;
+    }
+
+    @include on-desktop {
+      grid-column: span 2;
+      padding-top: 8px;
+    }
+
+    @include on-wide-desktop {
+      padding-top: 40px;
+    }
+  }
+
+  &__title {
+    grid-column: 1 / -1;
+    font-size: 64px;
+
+    @include on-tablet {
+      font-size: 80px;
+    }
+
+    @include on-desktop {
+      font-size: 136px;
+    }
+
+    @include on-wide-desktop {
+      font-size: 400px;
+    }
+  }
+
+  &__button {
+    grid-column: 1 / -1;
+
+    height: 56px;
+    background-color: transparent;
+    border: 2px solid $highlight-text-color;
+    border-radius: 32px;
+    text-transform: uppercase;
+    font-size: 16px;
+    line-height: 1;
+    font-weight: 500;
+    color: $highlight-text-color;
+
+    @include on-tablet {
+      grid-column: 3 / -3;
+    }
+
+    @include on-desktop {
+      grid-column: 1 / 3;
+    }
+  }
+}
